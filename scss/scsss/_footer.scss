@@ -1,0 +1,105 @@
+footer {
+    background-color: #3f3b3d;
+    padding: 50px 0;
+    .b {
+     @include font("Roboto", 29px, 400, #ffffff);
+      text-transform: uppercase;
+    }
+    .img2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px -30px;
+  
+      @include font("Roboto", 12px, 400, #ffffff);
+      img {
+        width: 300px;
+        height: 300px;
+        margin-top: 30px;
+      }
+    }
+    .subscribe {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      margin-top: 20px;
+      .input {
+        width: 500px;
+        height: 4px;
+        background-color: #ffffff;
+        margin-top: 50px;
+      }
+  
+      p {
+        @include font("Roboto", 24px, 400, #ffffff);
+      }
+      .alll {
+        @include style (flex, center, center , 20px);
+        .img5 {
+          @include style (flex, center, center, 10px);
+          flex-direction: column;
+          padding: 0 40px;
+          b {
+           @include font("Roboto", 16px, 400, #ffffff);
+            margin-left: -30px;
+            cursor: pointer;
+          }
+          ul {
+            flex-direction: column;
+            @include style (flex, center, center, 10px);
+            li {
+              flex-direction: column;
+              a {
+                @include font("Roboto", 16px, 400, #ffffff);
+               
+                flex-direction: column;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+    .ends {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      margin-top: 20px;
+      padding-bottom: 20px;
+      p {
+        font-family: "Roboto";
+        font-size: 16px;
+        font-weight: 400;
+        color: #ffffff;
+  
+        span {
+          font-family: "Roboto";
+          font-size: 16px;
+          font-weight: 400;
+          color: #f14814;
+          margin-left: 10px;
+        }
+      }
+      .btn {
+        background-color: #f14814;
+        color: #ffffff;
+        padding: 14px 28px;
+        border: none;
+        font-size: 12px;
+        font-family: "Roboto";
+        font-weight: 400;
+        transition: all 0.5s ease;
+        cursor: pointer;
+        border-radius: 5px;
+        &:hover {
+          background-color: #ffffff;
+          color: #f14814;
+          transition: all 0.5s ease;
+          box-shadow: #02080e 0px 0px 10px 0px;
+          font-size: 18px;
+        }
+      }
+    }
+  }  

@@ -1,0 +1,97 @@
+header {
+    @include flex(row, space-between, center);
+    padding: 20px 40px;
+    .btn {
+      @include font("Roboto", 12px, 400, #3f3b3d);
+      border: none;
+      padding: 14px 20px;
+      background-color: #dddbda;
+      
+      transition: all 0.5s ease;
+      cursor: pointer;
+    }
+    .btn:hover {
+      background-color: #3f3b3d;
+      color: #dddbda;
+      transition: all 0.5s ease;
+      box-shadow: #02080e 0px 0px 10px 0px;
+    }
+    .shop {
+      background-color: #f8f9fa;
+      color: white;
+      padding: 10px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+  
+      .number {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #02080e;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+  
+        p {
+            @include font("Roboto", 12px, 400, white);
+        }
+      }
+      .number:hover {
+        background-color: #555;
+        transition: all 0.5s ease;
+        box-shadow: #02080e 0px 0px 10px 0px;
+      }
+    }
+    #navbar {
+      position: sticky;
+      top: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    .shop:hover {
+      background-color: #555333;
+      transition: all 0.5s ease;
+      box-shadow: #02080e 0px 0px 10px 0px;
+    }
+  }
+  .logo {
+    width: 100px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+  }
+  .logo:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+  }
+  .shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  img {
+    cursor: pointer;
+    transition: all 0.5s ease;
+    height: auto;
+    width: auto;
+  }
+  nav {
+    ul {
+      li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 40px;
+        a {
+         @include font("Roboto", 18px, 400, #3f3b3d);
+        }
+      }
+    }
+  }

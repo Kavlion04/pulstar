@@ -1,25 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
-}
-
-body {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
-body img {
-  cursor: pointer;
-}
-
-.contianer {
-  max-width: 1280px;
-  margin: 0 auto;
-}
-
 header {
   display: flex;
   justify-content: space-between;
@@ -60,15 +39,18 @@ header .shop .number {
   align-items: center;
 }
 header .shop .number p {
-  color: white;
-  font-size: 12px;
-  font-family: "Roboto";
-  font-weight: 400;
+  @in;
 }
 header .shop .number:hover {
   background-color: #555;
   transition: all 0.5s ease;
   box-shadow: #02080e 0px 0px 10px 0px;
+}
+header #navbar {
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 header .shop:hover {
   background-color: #555333;
@@ -101,6 +83,13 @@ header .shop:hover {
   gap: 20px;
 }
 
+img {
+  cursor: pointer;
+  transition: all 0.5s ease;
+  height: auto;
+  width: auto;
+}
+
 nav ul li {
   display: flex;
   justify-content: space-between;
@@ -118,12 +107,18 @@ nav ul li a {
   margin-bottom: -400px;
 }
 .hero .contianer .text {
-  padding: 150px 20px;
+  height: 65vh;
   background-color: #3f3b3d;
-  width: 100%;
+  width: 105%;
   position: relative;
   z-index: 3;
   top: -478px;
+  left: -80px;
+}
+.hero .contianer .text1 {
+  position: relative;
+  top: 270px;
+  left: 30px;
 }
 .hero .contianer h1 {
   color: white;
@@ -448,8 +443,90 @@ nav ul li a {
   margin-top: 35px;
 }
 
+@media (max-width: 650px) {
+  header {
+    padding: 2px;
+  }
+  header nav {
+    display: none;
+  }
+  main {
+    flex-direction: column;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .hero .contianer {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .hero .contianer .text {
+    padding: 20px;
+  }
+  .hero .contianer {
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 235vh;
+  }
+  .hero .contianer .img123 {
+    position: relative;
+    left: -730px;
+    top: 30px;
+  }
+  .hero .contianer .text {
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    top: -80px;
+  }
+  .hero .contianer .text1 {
+    margin-left: 80px;
+  }
+  .ready .p3 {
+    font-size: 12px;
+  }
+  .ready .p3 br {
+    display: none;
+  }
+  .box {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  h3 {
+    margin-left: 50px;
+  }
+  .rest1 {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .end .rest4 {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .last .contianer {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .img2 {
+    flex-wrap: wrap;
+  }
+  .img2 img {
+    width: 300px;
+    height: 300px;
+  }
+  .subscribe {
+    flex-direction: column;
+    margin-top: 30px;
+    flex-wrap: wrap;
+  }
+  .subscribe .alll {
+    margin-top: 40px;
+  }
+}
 footer {
-  background-color: #3F3B3D;
+  background-color: #3f3b3d;
   padding: 50px 0;
 }
 footer .b {
@@ -484,14 +561,14 @@ footer .subscribe {
 footer .subscribe .input {
   width: 500px;
   height: 4px;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   margin-top: 50px;
 }
 footer .subscribe p {
   font-family: "Roboto";
   font-size: 24px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 footer .subscribe .alll {
   display: flex;
@@ -511,7 +588,7 @@ footer .subscribe .alll .img5 b {
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-left: -30px;
   cursor: pointer;
 }
@@ -529,7 +606,7 @@ footer .subscribe .alll .img5 ul li a {
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
   flex-direction: column;
   cursor: pointer;
 }
@@ -545,7 +622,7 @@ footer .ends p {
   font-family: "Roboto";
   font-size: 16px;
   font-weight: 400;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 footer .ends p span {
   font-family: "Roboto";
@@ -556,7 +633,7 @@ footer .ends p span {
 }
 footer .ends .btn {
   background-color: #f14814;
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 14px 28px;
   border: none;
   font-size: 12px;
@@ -567,9 +644,36 @@ footer .ends .btn {
   border-radius: 5px;
 }
 footer .ends .btn:hover {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   color: #f14814;
   transition: all 0.5s ease;
   box-shadow: #02080e 0px 0px 10px 0px;
   font-size: 18px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  height: auto;
+  width: auto;
+}
+body img {
+  cursor: pointer;
+}
+
+.contianer {
+  max-width: 1280px;
+  margin: 0 auto;
 }/*# sourceMappingURL=style.css.map */
